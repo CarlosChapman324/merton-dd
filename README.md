@@ -141,13 +141,20 @@ Honestidad estadística (detalle en `docs/bitacora_fase*.md`):
 ```bash
 uv sync
 uv run pytest                              # 46 tests
+export SEC_USER_AGENT="Tu Nombre tu@correo.com"   # EDGAR lo exige para descargar
 uv run python scripts/build_data.py        # ingesta (cachea todo en data/cache)
 uv run python scripts/build_model.py       # DD completo + naive por empresa-mes
 uv run python scripts/build_validation.py  # la réplica: deciles, AUC, bootstrap, logit
 uv run python scripts/build_mejora.py      # baseline, señal incremental, casos, calibración
 uv run python scripts/build_figuras.py     # figuras del README
+uv run python scripts/build_publico.py     # subconjunto versionado para el deploy
 uv run streamlit run app/streamlit_app.py  # dashboard
 ```
+
+El cache completo (~515 MB, sobre todo companyfacts crudos de EDGAR) no se
+versiona: se reconstruye con los scripts. Lo que el dashboard necesita para
+correr sin él vive en `data/publico/` (1.8 MB), y por eso la app puede
+desplegarse tal cual.
 
 Estructura: `data/` ingesta (EDGAR, yfinance, FRED, con cache Parquet),
 `model/` matemática pura sin red (Black-Scholes, solver iterativo con Newton
