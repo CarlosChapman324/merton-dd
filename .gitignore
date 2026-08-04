@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+
+# El cache pesa ~515 MB (companyfacts crudos de EDGAR) y se reconstruye
+# con scripts/build_data.py. Lo que el dashboard necesita para el deploy
+# vive versionado en data/publico/ (ver scripts/build_publico.py).
+data/cache/
+
+# Configuración local del entorno de desarrollo
+.claude/
