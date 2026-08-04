@@ -1,0 +1,9 @@
+# Dependencias del dashboard para Streamlit Community Cloud (que no usa uv).
+# Solo lo que la app necesita para leer resultados y graficar: la ingesta y
+# el modelado (yfinance, scipy, statsmodels, lxml, kaleido) no corren en el
+# deploy. Para reproducir el pipeline completo: uv sync (ver pyproject.toml).
+streamlit>=1.58
+plotly>=6.8
+pandas>=3.0
+pyarrow>=24.0
+numpy>=2.5

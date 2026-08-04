@@ -1,0 +1,32 @@
+{
+  "aucs_cv": {
+    "baseline contable": 0.9145904858010947,
+    "solo dd_naive": 0.9797272099068762,
+    "baseline + dd_naive": 0.9322659017867916,
+    "baseline + dd_merton": 0.9280703967357326
+  },
+  "ganancia_dd_sobre_baseline": 0.017675415985696885,
+  "z_dd_en_conjunto": -0.8268225052702337,
+  "p_dd_en_conjunto": 0.4083376721649955,
+  "pseudo_r2": {
+    "baseline contable": 0.6197337899131128,
+    "solo dd_naive": 0.5218506246018217,
+    "baseline + dd_naive": 0.6220892406560135,
+    "baseline + dd_merton": 0.6215779106014272
+  },
+  "calibracion_global": [
+    {
+      "modelo": "naive",
+      "pi_promedio": 0.016919475551186572,
+      "tasa_realizada": 0.008976660682226212,
+      "ratio": 1.884829576402184
+    },
+    {
+      "modelo": "merton",
+      "pi_promedio": 0.006591616022142436,
+      "tasa_realizada": 0.008976660682226212,
+      "ratio": 0.7343060248666674
+    }
+  ],
+  "advertencia": "AUC y pseudo-R2 no comparables con el paper (efecto techo del panel, N efectivo 11 eventos); z con 11 clusters tratados es anticonservador."
+}

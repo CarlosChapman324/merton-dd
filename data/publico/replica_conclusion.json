@@ -1,0 +1,21 @@
+{
+  "auc_naive": 0.98338800274419,
+  "auc_merton": 0.9804374624817769,
+  "diff": 0.0029505402624131483,
+  "diff_ic95": [
+    -0.004245362335518373,
+    0.013853723410462478
+  ],
+  "prob_naive_mayor_igual": 0.649,
+  "empate_estadistico": true,
+  "signo_depende_de": [
+    "PCG"
+  ],
+  "pseudo_r2": {
+    "dd_naive": 0.5223533496513321,
+    "dd_merton": 0.5167268497743562,
+    "dd_naive+dd_merton": 0.5259162999178489
+  },
+  "replica_hallazgo_paper": true,
+  "advertencia_niveles": "AUC ~0.98 y pseudo-R2 ~0.52 NO son comparables con el paper: el panel (mega-caps sobrevivientes del S&P 500 actual vs 11 quebradas OTC) hace la separaci\u00f3n casi trivial y comprime las diferencias entre modelos (efecto techo). La comparaci\u00f3n interna naive vs completo s\u00ed es v\u00e1lida: mismas 14,482 filas para ambos. N efectivo de eventos: 11."
+}
